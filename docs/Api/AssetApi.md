@@ -4,8 +4,7 @@ All URIs are relative to *https://public-api.bridgemanimages.com/1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getImage**](AssetApi.md#getImage) | **GET** /asset/{id}/image/{size} | 
-
+[**getImage**](AssetApi.md#getimage) | **GET** /asset/{id}/image/{size} | 
 
 # **getImage**
 > string getImage($id, $size)

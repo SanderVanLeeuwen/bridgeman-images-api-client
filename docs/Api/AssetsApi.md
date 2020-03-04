@@ -4,9 +4,8 @@ All URIs are relative to *https://public-api.bridgemanimages.com/1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAssets**](AssetsApi.md#getAssets) | **GET** /assets/{scope} | 
-[**getAssetsRemoved**](AssetsApi.md#getAssetsRemoved) | **GET** /assets-removed | 
-
+[**getAssets**](AssetsApi.md#getassets) | **GET** /assets/{scope} | 
+[**getAssetsRemoved**](AssetsApi.md#getassetsremoved) | **GET** /assets-removed | 
 
 # **getAssets**
 > \Swagger\Client\Model\InlineResponse200 getAssets($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id)
@@ -85,7 +84,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| Limits the list returned to this amount. Default 10. | [optional]
  **sort** | **string**| Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix | [optional]
  **sort_order** | **string**| Defines an order for sorting: ASC or DESC. | [optional]
- **query** | **string**| Filter the list by given query, e.g.: &#39;cats dogs&#39; | [optional]
+ **query** | **string**| Filter the list by given query, e.g.: &#x27;cats dogs&#x27; | [optional]
  **asset_category_id** | **int**|  | [optional]
  **asset_colour_type** | **string**| * bw &#x3D; Black and White * col &#x3D; Coloured | [optional]
  **asset_copyright_status** | **int**| * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status | [optional]
@@ -108,7 +107,7 @@ Name | Type | Description  | Notes
  **asset_rgb_green_value** | **int**|  | [optional]
  **asset_rgb_blue_value** | **int**|  | [optional]
  **asset_rgb_profile** | **string**|  | [optional]
- **asset_title** | **string**| Example: &#39;rainy%20day&#39; | [optional]
+ **asset_title** | **string**| Example: &#x27;rainy%20day&#x27; | [optional]
  **asset_type** | **int**| * 1 &#x3D; Image * 2 &#x3D; Footage | [optional]
  **asset_width_min** | **int**|  | [optional]
  **asset_width_max** | **int**|  | [optional]
@@ -155,7 +154,7 @@ $apiInstance = new Swagger\Client\Api\AssetsApi(
     $config
 );
 $date_start = new \DateTime("2013-10-20"); // \DateTime | start date
-$date_end = new \DateTime("todays date"); // \DateTime | end date
+$date_end = new \DateTime("2013-10-20"); // \DateTime | end date
 
 try {
     $result = $apiInstance->getAssetsRemoved($date_start, $date_end);
@@ -171,7 +170,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date_start** | **\DateTime**| start date |
- **date_end** | **\DateTime**| end date | [optional] [default to todays date]
+ **date_end** | **\DateTime**| end date | [optional]
 
 ### Return type
 
