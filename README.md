@@ -86,10 +86,12 @@ Class | Method | HTTP request | Description
 *AssetApi* | [**getImage**](docs/Api/AssetApi.md#getimage) | **GET** /asset/{id}/image/{size} | 
 *AssetsApi* | [**getAssets**](docs/Api/AssetsApi.md#getassets) | **GET** /assets/{scope} | 
 *AssetsApi* | [**getAssetsRemoved**](docs/Api/AssetsApi.md#getassetsremoved) | **GET** /assets-removed | 
+*AuthenticationApi* | [**getToken**](docs/Api/AuthenticationApi.md#gettoken) | **GET** /token | 
 
 ## Documentation For Models
 
  - [InlineResponse200](docs/Model/InlineResponse200.md)
+ - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse200Data](docs/Model/InlineResponse200Data.md)
  - [InlineResponse200Metadata](docs/Model/InlineResponse200Metadata.md)
 
