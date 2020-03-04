@@ -20,10 +20,14 @@ Returns an array of assets
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Swagger\Client\Api\AssetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $scope = "scope_example"; // string | Scope of data to be returned: * basic * profile * limited_profile
 $offset = 56; // int | Offsets the list returned to this amount. Default 0.
@@ -120,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -141,10 +145,14 @@ Return an array of assets that are removed
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Swagger\Client\Api\AssetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $date_start = new \DateTime("2013-10-20"); // \DateTime | start date
 $date_end = new \DateTime("todays date"); // \DateTime | end date
@@ -171,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
