@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Bridgeman\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Bridgeman\Client\ObjectSerializer;
 
 /**
  * InlineResponse200 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'metadata' => '\Swagger\Client\Model\InlineResponse200Metadata',
-'data' => '\Swagger\Client\Model\InlineResponse200Data[]'    ];
+        'metadata' => '\Bridgeman\Client\Model\InlineResponse200Metadata',
+'data' => '\Bridgeman\Client\Model\InlineResponse200Data[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -205,7 +205,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets metadata
      *
-     * @return \Swagger\Client\Model\InlineResponse200Metadata
+     * @return \Bridgeman\Client\Model\InlineResponse200Metadata
      */
     public function getMetadata()
     {
@@ -215,7 +215,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets metadata
      *
-     * @param \Swagger\Client\Model\InlineResponse200Metadata $metadata metadata
+     * @param \Bridgeman\Client\Model\InlineResponse200Metadata $metadata metadata
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\InlineResponse200Data[]
+     * @return \Bridgeman\Client\Model\InlineResponse200Data[]
      */
     public function getData()
     {
@@ -239,7 +239,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\InlineResponse200Data[] $data data
+     * @param \Bridgeman\Client\Model\InlineResponse200Data[] $data data
      *
      * @return $this
      */

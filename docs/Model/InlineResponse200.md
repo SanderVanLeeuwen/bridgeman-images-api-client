@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**\Swagger\Client\Model\InlineResponse200Metadata**](InlineResponse200Metadata.md) |  | [optional] 
-**data** | [**\Swagger\Client\Model\InlineResponse200Data[]**](InlineResponse200Data.md) |  | [optional] 
+**metadata** | [**\Bridgeman\Client\Model\InlineResponse200Metadata**](InlineResponse200Metadata.md) |  | [optional] 
+**data** | [**\Bridgeman\Client\Model\InlineResponse200Data[]**](InlineResponse200Data.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -1,4 +1,4 @@
-# Swagger\Client\AssetsApi
+# Bridgeman\Client\AssetsApi
 
 All URIs are relative to *https://public-api.bridgemanimages.com/1.0*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getAssetsRemoved**](AssetsApi.md#getassetsremoved) | **GET** /assets-removed | 
 
 # **getAssets**
-> \Swagger\Client\Model\InlineResponse200 getAssets($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id)
+> \Bridgeman\Client\Model\InlineResponse200 getAssets($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id)
 
 
 
@@ -20,9 +20,9 @@ Returns an array of assets
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Bridgeman\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AssetsApi(
+$apiInstance = new Bridgeman\Client\Api\AssetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bridgeman\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAssetsRemoved**
-> \Swagger\Client\Model\InlineResponse200 getAssetsRemoved($date_start, $date_end)
+> \Bridgeman\Client\Model\InlineResponse200 getAssetsRemoved($date_start, $date_end)
 
 
 
@@ -145,9 +145,9 @@ Return an array of assets that are removed
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Bridgeman\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AssetsApi(
+$apiInstance = new Bridgeman\Client\Api\AssetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bridgeman\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

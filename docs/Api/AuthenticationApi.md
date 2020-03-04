@@ -1,4 +1,4 @@
-# Swagger\Client\AuthenticationApi
+# Bridgeman\Client\AuthenticationApi
 
 All URIs are relative to *https://public-api.bridgemanimages.com/1.0*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getToken**](AuthenticationApi.md#gettoken) | **GET** /token | 
 
 # **getToken**
-> \Swagger\Client\Model\InlineResponse2001 getToken($client_id, $client_secret, $grant_type)
+> \Bridgeman\Client\Model\InlineResponse2001 getToken($client_id, $client_secret, $grant_type)
 
 
 
@@ -18,7 +18,7 @@ Get access token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\AuthenticationApi(
+$apiInstance = new Bridgeman\Client\Api\AuthenticationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Bridgeman\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 

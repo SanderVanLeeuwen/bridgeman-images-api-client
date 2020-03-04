@@ -1,4 +1,4 @@
-# Swagger\Client\AssetApi
+# Bridgeman\Client\AssetApi
 
 All URIs are relative to *https://public-api.bridgemanimages.com/1.0*
 
@@ -19,9 +19,9 @@ Returns an image (JPG format)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Bridgeman\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AssetApi(
+$apiInstance = new Bridgeman\Client\Api\AssetApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

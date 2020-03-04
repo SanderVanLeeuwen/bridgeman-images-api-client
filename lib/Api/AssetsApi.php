@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Bridgeman\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Bridgeman\Client\ApiException;
+use Bridgeman\Client\Configuration;
+use Bridgeman\Client\HeaderSelector;
+use Bridgeman\Client\ObjectSerializer;
 
 /**
  * AssetsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -127,9 +127,9 @@ class AssetsApi
      * @param  string $region 3 letters country code (optional)
      * @param  int $supplier_id supplier_id (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Bridgeman\Client\Model\InlineResponse200
      */
     public function getAssets($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
@@ -178,13 +178,13 @@ class AssetsApi
      * @param  string $region 3 letters country code (optional)
      * @param  int $supplier_id (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bridgeman\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetsWithHttpInfo($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse200';
         $request = $this->getAssetsRequest($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         try {
@@ -236,7 +236,7 @@ class AssetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\Bridgeman\Client\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -350,7 +350,7 @@ class AssetsApi
      */
     public function getAssetsAsyncWithHttpInfo($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse200';
         $request = $this->getAssetsRequest($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         return $this->client
@@ -678,9 +678,9 @@ class AssetsApi
      * @param  \DateTime $date_start start date (required)
      * @param  \DateTime $date_end end date (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Bridgeman\Client\Model\InlineResponse200
      */
     public function getAssetsRemoved($date_start, $date_end = null)
     {
@@ -694,13 +694,13 @@ class AssetsApi
      * @param  \DateTime $date_start start date (required)
      * @param  \DateTime $date_end end date (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bridgeman\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetsRemovedWithHttpInfo($date_start, $date_end = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse200';
         $request = $this->getAssetsRemovedRequest($date_start, $date_end);
 
         try {
@@ -752,7 +752,7 @@ class AssetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\Bridgeman\Client\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -796,7 +796,7 @@ class AssetsApi
      */
     public function getAssetsRemovedAsyncWithHttpInfo($date_start, $date_end = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse200';
         $request = $this->getAssetsRemovedRequest($date_start, $date_end);
 
         return $this->client

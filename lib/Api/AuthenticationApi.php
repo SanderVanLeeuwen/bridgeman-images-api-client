@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Bridgeman\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Bridgeman\Client\ApiException;
+use Bridgeman\Client\Configuration;
+use Bridgeman\Client\HeaderSelector;
+use Bridgeman\Client\ObjectSerializer;
 
 /**
  * AuthenticationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class AuthenticationApi
      * @param  string $client_secret client_secret (required)
      * @param  string $grant_type grant_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Bridgeman\Client\Model\InlineResponse2001
      */
     public function getToken($client_id, $client_secret, $grant_type)
     {
@@ -110,13 +110,13 @@ class AuthenticationApi
      * @param  string $client_secret (required)
      * @param  string $grant_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bridgeman\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenWithHttpInfo($client_id, $client_secret, $grant_type)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
         $request = $this->getTokenRequest($client_id, $client_secret, $grant_type);
 
         try {
@@ -168,7 +168,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2001',
+                        '\Bridgeman\Client\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class AuthenticationApi
      */
     public function getTokenAsyncWithHttpInfo($client_id, $client_secret, $grant_type)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
         $request = $this->getTokenRequest($client_id, $client_secret, $grant_type);
 
         return $this->client
