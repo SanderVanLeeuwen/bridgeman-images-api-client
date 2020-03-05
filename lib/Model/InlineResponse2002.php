@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200
+ * InlineResponse2002
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Bridgeman\Client\ObjectSerializer;
 
 /**
- * InlineResponse200 Class Doc Comment
+ * InlineResponse2002 Class Doc Comment
  *
  * @category Class
  * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200 implements ModelInterface, ArrayAccess
+class InlineResponse2002 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200';
+    protected static $swaggerModelName = 'inline_response_200_2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,10 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'metadata' => '\Bridgeman\Client\Model\InlineResponse2001Metadata',
-'data' => '\Bridgeman\Client\Model\InlineResponse200Data[]'    ];
+        'access_token' => 'string',
+'expires_in' => 'int',
+'token_type' => 'string',
+'scope' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +67,10 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'metadata' => null,
-'data' => null    ];
+        'access_token' => null,
+'expires_in' => null,
+'token_type' => null,
+'scope' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +99,10 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'metadata' => 'metadata',
-'data' => 'data'    ];
+        'access_token' => 'access_token',
+'expires_in' => 'expires_in',
+'token_type' => 'token_type',
+'scope' => 'scope'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +110,10 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'metadata' => 'setMetadata',
-'data' => 'setData'    ];
+        'access_token' => 'setAccessToken',
+'expires_in' => 'setExpiresIn',
+'token_type' => 'setTokenType',
+'scope' => 'setScope'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +121,10 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'metadata' => 'getMetadata',
-'data' => 'getData'    ];
+        'access_token' => 'getAccessToken',
+'expires_in' => 'getExpiresIn',
+'token_type' => 'getTokenType',
+'scope' => 'getScope'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +184,10 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['access_token'] = isset($data['access_token']) ? $data['access_token'] : null;
+        $this->container['expires_in'] = isset($data['expires_in']) ? $data['expires_in'] : null;
+        $this->container['token_type'] = isset($data['token_type']) ? $data['token_type'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
     /**
@@ -203,49 +215,97 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets metadata
+     * Gets access_token
      *
-     * @return \Bridgeman\Client\Model\InlineResponse2001Metadata
+     * @return string
      */
-    public function getMetadata()
+    public function getAccessToken()
     {
-        return $this->container['metadata'];
+        return $this->container['access_token'];
     }
 
     /**
-     * Sets metadata
+     * Sets access_token
      *
-     * @param \Bridgeman\Client\Model\InlineResponse2001Metadata $metadata metadata
+     * @param string $access_token access_token
      *
      * @return $this
      */
-    public function setMetadata($metadata)
+    public function setAccessToken($access_token)
     {
-        $this->container['metadata'] = $metadata;
+        $this->container['access_token'] = $access_token;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets expires_in
      *
-     * @return \Bridgeman\Client\Model\InlineResponse200Data[]
+     * @return int
      */
-    public function getData()
+    public function getExpiresIn()
     {
-        return $this->container['data'];
+        return $this->container['expires_in'];
     }
 
     /**
-     * Sets data
+     * Sets expires_in
      *
-     * @param \Bridgeman\Client\Model\InlineResponse200Data[] $data data
+     * @param int $expires_in expires_in
      *
      * @return $this
      */
-    public function setData($data)
+    public function setExpiresIn($expires_in)
     {
-        $this->container['data'] = $data;
+        $this->container['expires_in'] = $expires_in;
+
+        return $this;
+    }
+
+    /**
+     * Gets token_type
+     *
+     * @return string
+     */
+    public function getTokenType()
+    {
+        return $this->container['token_type'];
+    }
+
+    /**
+     * Sets token_type
+     *
+     * @param string $token_type token_type
+     *
+     * @return $this
+     */
+    public function setTokenType($token_type)
+    {
+        $this->container['token_type'] = $token_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets scope
+     *
+     * @return string
+     */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+     * Sets scope
+     *
+     * @param string $scope scope
+     *
+     * @return $this
+     */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
 
         return $this;
     }

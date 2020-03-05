@@ -92,8 +92,10 @@ Class | Method | HTTP request | Description
 
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
+ - [InlineResponse2001Data](docs/Model/InlineResponse2001Data.md)
+ - [InlineResponse2001Metadata](docs/Model/InlineResponse2001Metadata.md)
+ - [InlineResponse2002](docs/Model/InlineResponse2002.md)
  - [InlineResponse200Data](docs/Model/InlineResponse200Data.md)
- - [InlineResponse200Metadata](docs/Model/InlineResponse200Metadata.md)
 
 ## Documentation For Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200MetadataTest
+ * InlineResponse2001MetadataTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Bridgeman\Client;
 
 /**
- * InlineResponse200MetadataTest Class Doc Comment
+ * InlineResponse2001MetadataTest Class Doc Comment
  *
  * @category    Class
- * @description InlineResponse200Metadata
+ * @description InlineResponse2001Metadata
  * @package     Bridgeman\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200MetadataTest extends \PHPUnit_Framework_TestCase
+class InlineResponse2001MetadataTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,9 +69,9 @@ class InlineResponse200MetadataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "InlineResponse200Metadata"
+     * Test "InlineResponse2001Metadata"
      */
-    public function testInlineResponse200Metadata()
+    public function testInlineResponse2001Metadata()
     {
     }
 

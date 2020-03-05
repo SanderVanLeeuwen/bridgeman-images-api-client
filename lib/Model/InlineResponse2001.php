@@ -56,10 +56,8 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'access_token' => 'string',
-'expires_in' => 'int',
-'token_type' => 'string',
-'scope' => 'string'    ];
+        'metadata' => '\Bridgeman\Client\Model\InlineResponse2001Metadata',
+'data' => '\Bridgeman\Client\Model\InlineResponse2001Data[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +65,8 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'access_token' => null,
-'expires_in' => null,
-'token_type' => null,
-'scope' => null    ];
+        'metadata' => null,
+'data' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +95,8 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'access_token' => 'access_token',
-'expires_in' => 'expires_in',
-'token_type' => 'token_type',
-'scope' => 'scope'    ];
+        'metadata' => 'metadata',
+'data' => 'data'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +104,8 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'access_token' => 'setAccessToken',
-'expires_in' => 'setExpiresIn',
-'token_type' => 'setTokenType',
-'scope' => 'setScope'    ];
+        'metadata' => 'setMetadata',
+'data' => 'setData'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +113,8 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'access_token' => 'getAccessToken',
-'expires_in' => 'getExpiresIn',
-'token_type' => 'getTokenType',
-'scope' => 'getScope'    ];
+        'metadata' => 'getMetadata',
+'data' => 'getData'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +174,8 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['access_token'] = isset($data['access_token']) ? $data['access_token'] : null;
-        $this->container['expires_in'] = isset($data['expires_in']) ? $data['expires_in'] : null;
-        $this->container['token_type'] = isset($data['token_type']) ? $data['token_type'] : null;
-        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -215,97 +203,49 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets access_token
+     * Gets metadata
      *
-     * @return string
+     * @return \Bridgeman\Client\Model\InlineResponse2001Metadata
      */
-    public function getAccessToken()
+    public function getMetadata()
     {
-        return $this->container['access_token'];
+        return $this->container['metadata'];
     }
 
     /**
-     * Sets access_token
+     * Sets metadata
      *
-     * @param string $access_token access_token
+     * @param \Bridgeman\Client\Model\InlineResponse2001Metadata $metadata metadata
      *
      * @return $this
      */
-    public function setAccessToken($access_token)
+    public function setMetadata($metadata)
     {
-        $this->container['access_token'] = $access_token;
+        $this->container['metadata'] = $metadata;
 
         return $this;
     }
 
     /**
-     * Gets expires_in
+     * Gets data
      *
-     * @return int
+     * @return \Bridgeman\Client\Model\InlineResponse2001Data[]
      */
-    public function getExpiresIn()
+    public function getData()
     {
-        return $this->container['expires_in'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets expires_in
+     * Sets data
      *
-     * @param int $expires_in expires_in
+     * @param \Bridgeman\Client\Model\InlineResponse2001Data[] $data data
      *
      * @return $this
      */
-    public function setExpiresIn($expires_in)
+    public function setData($data)
     {
-        $this->container['expires_in'] = $expires_in;
-
-        return $this;
-    }
-
-    /**
-     * Gets token_type
-     *
-     * @return string
-     */
-    public function getTokenType()
-    {
-        return $this->container['token_type'];
-    }
-
-    /**
-     * Sets token_type
-     *
-     * @param string $token_type token_type
-     *
-     * @return $this
-     */
-    public function setTokenType($token_type)
-    {
-        $this->container['token_type'] = $token_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets scope
-     *
-     * @return string
-     */
-    public function getScope()
-    {
-        return $this->container['scope'];
-    }
-
-    /**
-     * Sets scope
-     *
-     * @param string $scope scope
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        $this->container['scope'] = $scope;
+        $this->container['data'] = $data;
 
         return $this;
     }

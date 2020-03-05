@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAssetsRemoved**
-> \Bridgeman\Client\Model\InlineResponse200 getAssetsRemoved($date_start, $date_end)
+> \Bridgeman\Client\Model\InlineResponse2001 getAssetsRemoved($date_start, $date_end)
 
 
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bridgeman\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bridgeman\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 

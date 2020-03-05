@@ -1,4 +1,4 @@
-# InlineResponse200Metadata
+# InlineResponse2001Metadata
 
 ## Properties
 Name | Type | Description | Notes

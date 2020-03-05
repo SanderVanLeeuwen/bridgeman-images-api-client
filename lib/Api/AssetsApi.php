@@ -680,7 +680,7 @@ class AssetsApi
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Bridgeman\Client\Model\InlineResponse200
+     * @return \Bridgeman\Client\Model\InlineResponse2001
      */
     public function getAssetsRemoved($date_start, $date_end = null)
     {
@@ -696,11 +696,11 @@ class AssetsApi
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Bridgeman\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bridgeman\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetsRemovedWithHttpInfo($date_start, $date_end = null)
     {
-        $returnType = '\Bridgeman\Client\Model\InlineResponse200';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
         $request = $this->getAssetsRemovedRequest($date_start, $date_end);
 
         try {
@@ -752,7 +752,7 @@ class AssetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bridgeman\Client\Model\InlineResponse200',
+                        '\Bridgeman\Client\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -796,7 +796,7 @@ class AssetsApi
      */
     public function getAssetsRemovedAsyncWithHttpInfo($date_start, $date_end = null)
     {
-        $returnType = '\Bridgeman\Client\Model\InlineResponse200';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
         $request = $this->getAssetsRemovedRequest($date_start, $date_end);
 
         return $this->client

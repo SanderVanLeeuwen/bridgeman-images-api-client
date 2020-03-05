@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200Metadata
+ * InlineResponse2001Metadata
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Bridgeman\Client\ObjectSerializer;
 
 /**
- * InlineResponse200Metadata Class Doc Comment
+ * InlineResponse2001Metadata Class Doc Comment
  *
  * @category Class
  * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200Metadata implements ModelInterface, ArrayAccess
+class InlineResponse2001Metadata implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse200Metadata implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_metadata';
+    protected static $swaggerModelName = 'inline_response_200_1_metadata';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
