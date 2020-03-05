@@ -90,12 +90,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Asset](docs/Model/Asset.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse2001Data](docs/Model/InlineResponse2001Data.md)
- - [InlineResponse2001Metadata](docs/Model/InlineResponse2001Metadata.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
- - [InlineResponse200Data](docs/Model/InlineResponse200Data.md)
+ - [MetaData](docs/Model/MetaData.md)
 
 ## Documentation For Authorization
 

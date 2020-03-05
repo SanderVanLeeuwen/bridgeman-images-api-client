@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200Data
+ * MetaData
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Bridgeman\Client\ObjectSerializer;
 
 /**
- * InlineResponse200Data Class Doc Comment
+ * MetaData Class Doc Comment
  *
  * @category Class
  * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200Data implements ModelInterface, ArrayAccess
+class MetaData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_data';
+    protected static $swaggerModelName = 'MetaData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,10 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-'description' => 'string'    ];
+        'type' => 'string',
+'total' => 'int',
+'limit' => 'int',
+'offset' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +67,10 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-'description' => null    ];
+        'type' => null,
+'total' => null,
+'limit' => null,
+'offset' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +99,10 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-'description' => 'description'    ];
+        'type' => 'type',
+'total' => 'total',
+'limit' => 'limit',
+'offset' => 'offset'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +110,10 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-'description' => 'setDescription'    ];
+        'type' => 'setType',
+'total' => 'setTotal',
+'limit' => 'setLimit',
+'offset' => 'setOffset'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +121,10 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-'description' => 'getDescription'    ];
+        'type' => 'getType',
+'total' => 'getTotal',
+'limit' => 'getLimit',
+'offset' => 'getOffset'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +184,10 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -203,49 +215,97 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets type
      *
-     * @return int
+     * @return string
      */
-    public function getId()
+    public function getType()
     {
-        return $this->container['id'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets id
+     * Sets type
      *
-     * @param int $id id
+     * @param string $type type
      *
      * @return $this
      */
-    public function setId($id)
+    public function setType($type)
     {
-        $this->container['id'] = $id;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets description
+     * Gets total
      *
-     * @return string
+     * @return int
      */
-    public function getDescription()
+    public function getTotal()
     {
-        return $this->container['description'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets description
+     * Sets total
      *
-     * @param string $description description
+     * @param int $total total
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setTotal($total)
     {
-        $this->container['description'] = $description;
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets limit
+     *
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     *
+     * @param int $limit limit
+     *
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets offset
+     *
+     * @return int
+     */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+     * Sets offset
+     *
+     * @param int $offset offset
+     *
+     * @return $this
+     */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
 
         return $this;
     }

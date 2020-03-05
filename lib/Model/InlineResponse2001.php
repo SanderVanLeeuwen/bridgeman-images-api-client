@@ -56,7 +56,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'metadata' => '\Bridgeman\Client\Model\InlineResponse2001Metadata',
+        'metadata' => '\Bridgeman\Client\Model\MetaData',
 'data' => '\Bridgeman\Client\Model\InlineResponse2001Data[]'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
     /**
      * Gets metadata
      *
-     * @return \Bridgeman\Client\Model\InlineResponse2001Metadata
+     * @return \Bridgeman\Client\Model\MetaData
      */
     public function getMetadata()
     {
@@ -215,7 +215,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
     /**
      * Sets metadata
      *
-     * @param \Bridgeman\Client\Model\InlineResponse2001Metadata $metadata metadata
+     * @param \Bridgeman\Client\Model\MetaData $metadata metadata
      *
      * @return $this
      */

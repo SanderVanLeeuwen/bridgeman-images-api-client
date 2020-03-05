@@ -56,8 +56,8 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'metadata' => '\Bridgeman\Client\Model\InlineResponse2001Metadata',
-'data' => '\Bridgeman\Client\Model\InlineResponse200Data[]'    ];
+        'metadata' => '\Bridgeman\Client\Model\MetaData',
+'data' => '\Bridgeman\Client\Model\Asset[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -205,7 +205,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets metadata
      *
-     * @return \Bridgeman\Client\Model\InlineResponse2001Metadata
+     * @return \Bridgeman\Client\Model\MetaData
      */
     public function getMetadata()
     {
@@ -215,7 +215,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets metadata
      *
-     * @param \Bridgeman\Client\Model\InlineResponse2001Metadata $metadata metadata
+     * @param \Bridgeman\Client\Model\MetaData $metadata metadata
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Bridgeman\Client\Model\InlineResponse200Data[]
+     * @return \Bridgeman\Client\Model\Asset[]
      */
     public function getData()
     {
@@ -239,7 +239,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Bridgeman\Client\Model\InlineResponse200Data[] $data data
+     * @param \Bridgeman\Client\Model\Asset[] $data data
      *
      * @return $this
      */
