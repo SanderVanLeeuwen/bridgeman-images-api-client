@@ -57,7 +57,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'metadata' => '\Bridgeman\Client\Model\MetaData',
-'data' => 'null[]'    ];
+'data' => '\Bridgeman\Client\Model\AssetLimitedProfile[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -229,7 +229,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return null[]
+     * @return \Bridgeman\Client\Model\AssetLimitedProfile[]
      */
     public function getData()
     {
@@ -239,7 +239,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param null[] $data data
+     * @param \Bridgeman\Client\Model\AssetLimitedProfile[] $data data
      *
      * @return $this
      */
