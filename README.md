@@ -90,7 +90,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [Asset](docs/Model/Asset.md)
+ - [AssetBasic](docs/Model/AssetBasic.md)
+ - [AssetBasicType](docs/Model/AssetBasicType.md)
+ - [AssetProfile](docs/Model/AssetProfile.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse2001Data](docs/Model/InlineResponse2001Data.md)

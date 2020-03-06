@@ -1,6 +1,6 @@
 <?php
 /**
- * AssetTest
+ * AssetBasicTypeTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Bridgeman\Client;
 
 /**
- * AssetTest Class Doc Comment
+ * AssetBasicTypeTest Class Doc Comment
  *
  * @category    Class
- * @description Asset
+ * @description AssetBasicType
  * @package     Bridgeman\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AssetTest extends \PHPUnit_Framework_TestCase
+class AssetBasicTypeTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,9 +69,9 @@ class AssetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Asset"
+     * Test "AssetBasicType"
      */
-    public function testAsset()
+    public function testAssetBasicType()
     {
     }
 
@@ -83,9 +83,9 @@ class AssetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "name"
      */
-    public function testPropertyDescription()
+    public function testPropertyName()
     {
     }
 }

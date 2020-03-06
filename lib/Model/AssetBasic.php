@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200
+ * AssetBasic
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Bridgeman\Client\ObjectSerializer;
 
 /**
- * InlineResponse200 Class Doc Comment
+ * AssetBasic Class Doc Comment
  *
  * @category Class
  * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200 implements ModelInterface, ArrayAccess
+class AssetBasic implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200';
+    protected static $swaggerModelName = 'AssetBasic';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,9 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'metadata' => '\Bridgeman\Client\Model\MetaData',
-'data' => 'null[]'    ];
+        'id' => 'int',
+'code' => 'string',
+'type' => '\Bridgeman\Client\Model\AssetBasicType'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +66,9 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'metadata' => null,
-'data' => null    ];
+        'id' => null,
+'code' => null,
+'type' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +97,9 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'metadata' => 'metadata',
-'data' => 'data'    ];
+        'id' => 'id',
+'code' => 'code',
+'type' => 'type'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +107,9 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'metadata' => 'setMetadata',
-'data' => 'setData'    ];
+        'id' => 'setId',
+'code' => 'setCode',
+'type' => 'setType'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +117,9 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'metadata' => 'getMetadata',
-'data' => 'getData'    ];
+        'id' => 'getId',
+'code' => 'getCode',
+'type' => 'getType'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +179,9 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -203,49 +209,73 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets metadata
+     * Gets id
      *
-     * @return \Bridgeman\Client\Model\MetaData
+     * @return int
      */
-    public function getMetadata()
+    public function getId()
     {
-        return $this->container['metadata'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets metadata
+     * Sets id
      *
-     * @param \Bridgeman\Client\Model\MetaData $metadata metadata
+     * @param int $id id
      *
      * @return $this
      */
-    public function setMetadata($metadata)
+    public function setId($id)
     {
-        $this->container['metadata'] = $metadata;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets code
      *
-     * @return null[]
+     * @return string
      */
-    public function getData()
+    public function getCode()
     {
-        return $this->container['data'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets data
+     * Sets code
      *
-     * @param null[] $data data
+     * @param string $code code
      *
      * @return $this
      */
-    public function setData($data)
+    public function setCode($code)
     {
-        $this->container['data'] = $data;
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return \Bridgeman\Client\Model\AssetBasicType
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \Bridgeman\Client\Model\AssetBasicType $type type
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Asset
+ * AssetBasicType
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Bridgeman\Client\ObjectSerializer;
 
 /**
- * Asset Class Doc Comment
+ * AssetBasicType Class Doc Comment
  *
  * @category Class
  * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Asset implements ModelInterface, ArrayAccess
+class AssetBasicType implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Asset implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Asset';
+    protected static $swaggerModelName = 'AssetBasic_type';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class Asset implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-'description' => 'string'    ];
+'name' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,7 +66,7 @@ class Asset implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-'description' => null    ];
+'name' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -96,7 +96,7 @@ class Asset implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-'description' => 'description'    ];
+'name' => 'name'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,7 +105,7 @@ class Asset implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-'description' => 'setDescription'    ];
+'name' => 'setName'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,7 +114,7 @@ class Asset implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-'description' => 'getDescription'    ];
+'name' => 'getName'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -175,7 +175,7 @@ class Asset implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -227,25 +227,25 @@ class Asset implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets description
+     * Gets name
      *
      * @return string
      */
-    public function getDescription()
+    public function getName()
     {
-        return $this->container['description'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets description
+     * Sets name
      *
-     * @param string $description description
+     * @param string $name name
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setName($name)
     {
-        $this->container['description'] = $description;
+        $this->container['name'] = $name;
 
         return $this;
     }
