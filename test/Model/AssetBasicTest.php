@@ -95,4 +95,137 @@ class AssetBasicTest extends \PHPUnit_Framework_TestCase
     public function testPropertyType()
     {
     }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "keywords"
+     */
+    public function testPropertyKeywords()
+    {
+    }
+
+    /**
+     * Test attribute "year"
+     */
+    public function testPropertyYear()
+    {
+    }
+
+    /**
+     * Test attribute "century"
+     */
+    public function testPropertyCentury()
+    {
+    }
+
+    /**
+     * Test attribute "creator"
+     */
+    public function testPropertyCreator()
+    {
+    }
+
+    /**
+     * Test attribute "supplier"
+     */
+    public function testPropertySupplier()
+    {
+    }
+
+    /**
+     * Test attribute "location"
+     */
+    public function testPropertyLocation()
+    {
+    }
+
+    /**
+     * Test attribute "medium"
+     */
+    public function testPropertyMedium()
+    {
+    }
+
+    /**
+     * Test attribute "categories"
+     */
+    public function testPropertyCategories()
+    {
+    }
+
+    /**
+     * Test attribute "copyright"
+     */
+    public function testPropertyCopyright()
+    {
+    }
+
+    /**
+     * Test attribute "special_instruction"
+     */
+    public function testPropertySpecialInstruction()
+    {
+    }
+
+    /**
+     * Test attribute "dimensions"
+     */
+    public function testPropertyDimensions()
+    {
+    }
+
+    /**
+     * Test attribute "rgb_profile"
+     */
+    public function testPropertyRgbProfile()
+    {
+    }
+
+    /**
+     * Test attribute "credits"
+     */
+    public function testPropertyCredits()
+    {
+    }
+
+    /**
+     * Test attribute "permissions"
+     */
+    public function testPropertyPermissions()
+    {
+    }
+
+    /**
+     * Test attribute "restrictions"
+     */
+    public function testPropertyRestrictions()
+    {
+    }
+
+    /**
+     * Test attribute "thumbnail"
+     */
+    public function testPropertyThumbnail()
+    {
+    }
+
+    /**
+     * Test attribute "_score"
+     */
+    public function testPropertyScore()
+    {
+    }
 }

@@ -93,6 +93,11 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AssetBasic](docs/Model/AssetBasic.md)
+ - [AssetBasicCopyright](docs/Model/AssetBasicCopyright.md)
+ - [AssetBasicDimensions](docs/Model/AssetBasicDimensions.md)
+ - [AssetBasicRgbProfile](docs/Model/AssetBasicRgbProfile.md)
+ - [AssetBasicSupplier](docs/Model/AssetBasicSupplier.md)
+ - [AssetBasicThumbnail](docs/Model/AssetBasicThumbnail.md)
  - [AssetBasicType](docs/Model/AssetBasicType.md)
  - [AssetLimitedProfile](docs/Model/AssetLimitedProfile.md)
  - [AssetProfile](docs/Model/AssetProfile.md)

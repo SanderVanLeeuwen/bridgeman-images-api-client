@@ -90,14 +90,49 @@ class AssetsApi
      * Operation getAssetsBasic
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from asset_created_century_from (optional)
+     * @param  int $asset_created_century_until asset_created_century_until (optional)
+     * @param  int $asset_created_year_from asset_created_year_from (optional)
+     * @param  int $asset_created_year_until asset_created_year_until (optional)
+     * @param  string $asset_description asset_description (optional)
+     * @param  int $asset_height_min asset_height_min (optional)
+     * @param  int $asset_height_max asset_height_max (optional)
+     * @param  int $asset_id asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords asset_keywords (optional)
+     * @param  string $asset_location asset_location (optional)
+     * @param  string $asset_medium asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min asset_width_min (optional)
+     * @param  int $asset_width_max asset_width_max (optional)
+     * @param  int $copyright_handler_id copyright_handler_id (optional)
+     * @param  int $copyright_holder_id copyright_holder_id (optional)
+     * @param  int $creator_id creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bridgeman\Client\Model\InlineResponse200
      */
-    public function getAssetsBasic($offset = null)
+    public function getAssetsBasic($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        list($response) = $this->getAssetsBasicWithHttpInfo($offset);
+        list($response) = $this->getAssetsBasicWithHttpInfo($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
         return $response;
     }
 
@@ -105,15 +140,50 @@ class AssetsApi
      * Operation getAssetsBasicWithHttpInfo
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bridgeman\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAssetsBasicWithHttpInfo($offset = null)
+    public function getAssetsBasicWithHttpInfo($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse200';
-        $request = $this->getAssetsBasicRequest($offset);
+        $request = $this->getAssetsBasicRequest($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -180,13 +250,48 @@ class AssetsApi
      * 
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsBasicAsync($offset = null)
+    public function getAssetsBasicAsync($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        return $this->getAssetsBasicAsyncWithHttpInfo($offset)
+        return $this->getAssetsBasicAsyncWithHttpInfo($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -200,14 +305,49 @@ class AssetsApi
      * 
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsBasicAsyncWithHttpInfo($offset = null)
+    public function getAssetsBasicAsyncWithHttpInfo($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse200';
-        $request = $this->getAssetsBasicRequest($offset);
+        $request = $this->getAssetsBasicRequest($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -250,11 +390,46 @@ class AssetsApi
      * Create request for operation 'getAssetsBasic'
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAssetsBasicRequest($offset = null)
+    protected function getAssetsBasicRequest($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
 
         $resourcePath = '/assets/basic';
@@ -267,6 +442,146 @@ class AssetsApi
         // query params
         if ($offset !== null) {
             $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
+        }
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
+        }
+        // query params
+        if ($sort !== null) {
+            $queryParams['sort'] = ObjectSerializer::toQueryValue($sort);
+        }
+        // query params
+        if ($sort_order !== null) {
+            $queryParams['sort_order'] = ObjectSerializer::toQueryValue($sort_order);
+        }
+        // query params
+        if ($query !== null) {
+            $queryParams['query'] = ObjectSerializer::toQueryValue($query);
+        }
+        // query params
+        if ($asset_category_id !== null) {
+            $queryParams['asset_category_id'] = ObjectSerializer::toQueryValue($asset_category_id);
+        }
+        // query params
+        if ($asset_colour_type !== null) {
+            $queryParams['asset_colour_type'] = ObjectSerializer::toQueryValue($asset_colour_type);
+        }
+        // query params
+        if ($asset_copyright_status !== null) {
+            $queryParams['asset_copyright_status'] = ObjectSerializer::toQueryValue($asset_copyright_status);
+        }
+        // query params
+        if ($asset_created_century_from !== null) {
+            $queryParams['asset_created_century_from'] = ObjectSerializer::toQueryValue($asset_created_century_from);
+        }
+        // query params
+        if ($asset_created_century_until !== null) {
+            $queryParams['asset_created_century_until'] = ObjectSerializer::toQueryValue($asset_created_century_until);
+        }
+        // query params
+        if ($asset_created_year_from !== null) {
+            $queryParams['asset_created_year_from'] = ObjectSerializer::toQueryValue($asset_created_year_from);
+        }
+        // query params
+        if ($asset_created_year_until !== null) {
+            $queryParams['asset_created_year_until'] = ObjectSerializer::toQueryValue($asset_created_year_until);
+        }
+        // query params
+        if ($asset_description !== null) {
+            $queryParams['asset_description'] = ObjectSerializer::toQueryValue($asset_description);
+        }
+        // query params
+        if ($asset_height_min !== null) {
+            $queryParams['asset_height_min'] = ObjectSerializer::toQueryValue($asset_height_min);
+        }
+        // query params
+        if ($asset_height_max !== null) {
+            $queryParams['asset_height_max'] = ObjectSerializer::toQueryValue($asset_height_max);
+        }
+        // query params
+        if ($asset_id !== null) {
+            $queryParams['asset_id'] = ObjectSerializer::toQueryValue($asset_id);
+        }
+        // query params
+        if ($asset_id_from !== null) {
+            $queryParams['asset_id_from'] = ObjectSerializer::toQueryValue($asset_id_from);
+        }
+        // query params
+        if ($asset_id_to !== null) {
+            $queryParams['asset_id_to'] = ObjectSerializer::toQueryValue($asset_id_to);
+        }
+        // query params
+        if ($asset_image_of !== null) {
+            $queryParams['asset_image_of'] = ObjectSerializer::toQueryValue($asset_image_of);
+        }
+        // query params
+        if ($asset_keywords !== null) {
+            $queryParams['asset_keywords'] = ObjectSerializer::toQueryValue($asset_keywords);
+        }
+        // query params
+        if ($asset_location !== null) {
+            $queryParams['asset_location'] = ObjectSerializer::toQueryValue($asset_location);
+        }
+        // query params
+        if ($asset_medium !== null) {
+            $queryParams['asset_medium'] = ObjectSerializer::toQueryValue($asset_medium);
+        }
+        // query params
+        if ($asset_orientation !== null) {
+            $queryParams['asset_orientation'] = ObjectSerializer::toQueryValue($asset_orientation);
+        }
+        // query params
+        if ($asset_rgb_red_value !== null) {
+            $queryParams['asset_rgb_red_value'] = ObjectSerializer::toQueryValue($asset_rgb_red_value);
+        }
+        // query params
+        if ($asset_rgb_green_value !== null) {
+            $queryParams['asset_rgb_green_value'] = ObjectSerializer::toQueryValue($asset_rgb_green_value);
+        }
+        // query params
+        if ($asset_rgb_blue_value !== null) {
+            $queryParams['asset_rgb_blue_value'] = ObjectSerializer::toQueryValue($asset_rgb_blue_value);
+        }
+        // query params
+        if ($asset_rgb_profile !== null) {
+            $queryParams['asset_rgb_profile'] = ObjectSerializer::toQueryValue($asset_rgb_profile);
+        }
+        // query params
+        if ($asset_title !== null) {
+            $queryParams['asset_title'] = ObjectSerializer::toQueryValue($asset_title);
+        }
+        // query params
+        if ($asset_type !== null) {
+            $queryParams['asset_type'] = ObjectSerializer::toQueryValue($asset_type);
+        }
+        // query params
+        if ($asset_width_min !== null) {
+            $queryParams['asset_width_min'] = ObjectSerializer::toQueryValue($asset_width_min);
+        }
+        // query params
+        if ($asset_width_max !== null) {
+            $queryParams['asset_width_max'] = ObjectSerializer::toQueryValue($asset_width_max);
+        }
+        // query params
+        if ($copyright_handler_id !== null) {
+            $queryParams['copyright_handler_id'] = ObjectSerializer::toQueryValue($copyright_handler_id);
+        }
+        // query params
+        if ($copyright_holder_id !== null) {
+            $queryParams['copyright_holder_id'] = ObjectSerializer::toQueryValue($copyright_holder_id);
+        }
+        // query params
+        if ($creator_id !== null) {
+            $queryParams['creator_id'] = ObjectSerializer::toQueryValue($creator_id);
+        }
+        // query params
+        if ($region !== null) {
+            $queryParams['region'] = ObjectSerializer::toQueryValue($region);
+        }
+        // query params
+        if ($supplier_id !== null) {
+            $queryParams['supplier_id'] = ObjectSerializer::toQueryValue($supplier_id);
         }
 
 
@@ -342,14 +657,49 @@ class AssetsApi
      * Operation getAssetsLimitedProfile
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from asset_created_century_from (optional)
+     * @param  int $asset_created_century_until asset_created_century_until (optional)
+     * @param  int $asset_created_year_from asset_created_year_from (optional)
+     * @param  int $asset_created_year_until asset_created_year_until (optional)
+     * @param  string $asset_description asset_description (optional)
+     * @param  int $asset_height_min asset_height_min (optional)
+     * @param  int $asset_height_max asset_height_max (optional)
+     * @param  int $asset_id asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords asset_keywords (optional)
+     * @param  string $asset_location asset_location (optional)
+     * @param  string $asset_medium asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min asset_width_min (optional)
+     * @param  int $asset_width_max asset_width_max (optional)
+     * @param  int $copyright_handler_id copyright_handler_id (optional)
+     * @param  int $copyright_holder_id copyright_holder_id (optional)
+     * @param  int $creator_id creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bridgeman\Client\Model\InlineResponse2002
      */
-    public function getAssetsLimitedProfile($offset = null)
+    public function getAssetsLimitedProfile($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        list($response) = $this->getAssetsLimitedProfileWithHttpInfo($offset);
+        list($response) = $this->getAssetsLimitedProfileWithHttpInfo($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
         return $response;
     }
 
@@ -357,15 +707,50 @@ class AssetsApi
      * Operation getAssetsLimitedProfileWithHttpInfo
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bridgeman\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAssetsLimitedProfileWithHttpInfo($offset = null)
+    public function getAssetsLimitedProfileWithHttpInfo($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse2002';
-        $request = $this->getAssetsLimitedProfileRequest($offset);
+        $request = $this->getAssetsLimitedProfileRequest($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -432,13 +817,48 @@ class AssetsApi
      * 
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsLimitedProfileAsync($offset = null)
+    public function getAssetsLimitedProfileAsync($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        return $this->getAssetsLimitedProfileAsyncWithHttpInfo($offset)
+        return $this->getAssetsLimitedProfileAsyncWithHttpInfo($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -452,14 +872,49 @@ class AssetsApi
      * 
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsLimitedProfileAsyncWithHttpInfo($offset = null)
+    public function getAssetsLimitedProfileAsyncWithHttpInfo($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse2002';
-        $request = $this->getAssetsLimitedProfileRequest($offset);
+        $request = $this->getAssetsLimitedProfileRequest($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -502,11 +957,46 @@ class AssetsApi
      * Create request for operation 'getAssetsLimitedProfile'
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAssetsLimitedProfileRequest($offset = null)
+    protected function getAssetsLimitedProfileRequest($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
 
         $resourcePath = '/assets/limited_profile';
@@ -519,6 +1009,146 @@ class AssetsApi
         // query params
         if ($offset !== null) {
             $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
+        }
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
+        }
+        // query params
+        if ($sort !== null) {
+            $queryParams['sort'] = ObjectSerializer::toQueryValue($sort);
+        }
+        // query params
+        if ($sort_order !== null) {
+            $queryParams['sort_order'] = ObjectSerializer::toQueryValue($sort_order);
+        }
+        // query params
+        if ($query !== null) {
+            $queryParams['query'] = ObjectSerializer::toQueryValue($query);
+        }
+        // query params
+        if ($asset_category_id !== null) {
+            $queryParams['asset_category_id'] = ObjectSerializer::toQueryValue($asset_category_id);
+        }
+        // query params
+        if ($asset_colour_type !== null) {
+            $queryParams['asset_colour_type'] = ObjectSerializer::toQueryValue($asset_colour_type);
+        }
+        // query params
+        if ($asset_copyright_status !== null) {
+            $queryParams['asset_copyright_status'] = ObjectSerializer::toQueryValue($asset_copyright_status);
+        }
+        // query params
+        if ($asset_created_century_from !== null) {
+            $queryParams['asset_created_century_from'] = ObjectSerializer::toQueryValue($asset_created_century_from);
+        }
+        // query params
+        if ($asset_created_century_until !== null) {
+            $queryParams['asset_created_century_until'] = ObjectSerializer::toQueryValue($asset_created_century_until);
+        }
+        // query params
+        if ($asset_created_year_from !== null) {
+            $queryParams['asset_created_year_from'] = ObjectSerializer::toQueryValue($asset_created_year_from);
+        }
+        // query params
+        if ($asset_created_year_until !== null) {
+            $queryParams['asset_created_year_until'] = ObjectSerializer::toQueryValue($asset_created_year_until);
+        }
+        // query params
+        if ($asset_description !== null) {
+            $queryParams['asset_description'] = ObjectSerializer::toQueryValue($asset_description);
+        }
+        // query params
+        if ($asset_height_min !== null) {
+            $queryParams['asset_height_min'] = ObjectSerializer::toQueryValue($asset_height_min);
+        }
+        // query params
+        if ($asset_height_max !== null) {
+            $queryParams['asset_height_max'] = ObjectSerializer::toQueryValue($asset_height_max);
+        }
+        // query params
+        if ($asset_id !== null) {
+            $queryParams['asset_id'] = ObjectSerializer::toQueryValue($asset_id);
+        }
+        // query params
+        if ($asset_id_from !== null) {
+            $queryParams['asset_id_from'] = ObjectSerializer::toQueryValue($asset_id_from);
+        }
+        // query params
+        if ($asset_id_to !== null) {
+            $queryParams['asset_id_to'] = ObjectSerializer::toQueryValue($asset_id_to);
+        }
+        // query params
+        if ($asset_image_of !== null) {
+            $queryParams['asset_image_of'] = ObjectSerializer::toQueryValue($asset_image_of);
+        }
+        // query params
+        if ($asset_keywords !== null) {
+            $queryParams['asset_keywords'] = ObjectSerializer::toQueryValue($asset_keywords);
+        }
+        // query params
+        if ($asset_location !== null) {
+            $queryParams['asset_location'] = ObjectSerializer::toQueryValue($asset_location);
+        }
+        // query params
+        if ($asset_medium !== null) {
+            $queryParams['asset_medium'] = ObjectSerializer::toQueryValue($asset_medium);
+        }
+        // query params
+        if ($asset_orientation !== null) {
+            $queryParams['asset_orientation'] = ObjectSerializer::toQueryValue($asset_orientation);
+        }
+        // query params
+        if ($asset_rgb_red_value !== null) {
+            $queryParams['asset_rgb_red_value'] = ObjectSerializer::toQueryValue($asset_rgb_red_value);
+        }
+        // query params
+        if ($asset_rgb_green_value !== null) {
+            $queryParams['asset_rgb_green_value'] = ObjectSerializer::toQueryValue($asset_rgb_green_value);
+        }
+        // query params
+        if ($asset_rgb_blue_value !== null) {
+            $queryParams['asset_rgb_blue_value'] = ObjectSerializer::toQueryValue($asset_rgb_blue_value);
+        }
+        // query params
+        if ($asset_rgb_profile !== null) {
+            $queryParams['asset_rgb_profile'] = ObjectSerializer::toQueryValue($asset_rgb_profile);
+        }
+        // query params
+        if ($asset_title !== null) {
+            $queryParams['asset_title'] = ObjectSerializer::toQueryValue($asset_title);
+        }
+        // query params
+        if ($asset_type !== null) {
+            $queryParams['asset_type'] = ObjectSerializer::toQueryValue($asset_type);
+        }
+        // query params
+        if ($asset_width_min !== null) {
+            $queryParams['asset_width_min'] = ObjectSerializer::toQueryValue($asset_width_min);
+        }
+        // query params
+        if ($asset_width_max !== null) {
+            $queryParams['asset_width_max'] = ObjectSerializer::toQueryValue($asset_width_max);
+        }
+        // query params
+        if ($copyright_handler_id !== null) {
+            $queryParams['copyright_handler_id'] = ObjectSerializer::toQueryValue($copyright_handler_id);
+        }
+        // query params
+        if ($copyright_holder_id !== null) {
+            $queryParams['copyright_holder_id'] = ObjectSerializer::toQueryValue($copyright_holder_id);
+        }
+        // query params
+        if ($creator_id !== null) {
+            $queryParams['creator_id'] = ObjectSerializer::toQueryValue($creator_id);
+        }
+        // query params
+        if ($region !== null) {
+            $queryParams['region'] = ObjectSerializer::toQueryValue($region);
+        }
+        // query params
+        if ($supplier_id !== null) {
+            $queryParams['supplier_id'] = ObjectSerializer::toQueryValue($supplier_id);
         }
 
 
@@ -594,14 +1224,49 @@ class AssetsApi
      * Operation getAssetsProfile
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from asset_created_century_from (optional)
+     * @param  int $asset_created_century_until asset_created_century_until (optional)
+     * @param  int $asset_created_year_from asset_created_year_from (optional)
+     * @param  int $asset_created_year_until asset_created_year_until (optional)
+     * @param  string $asset_description asset_description (optional)
+     * @param  int $asset_height_min asset_height_min (optional)
+     * @param  int $asset_height_max asset_height_max (optional)
+     * @param  int $asset_id asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords asset_keywords (optional)
+     * @param  string $asset_location asset_location (optional)
+     * @param  string $asset_medium asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min asset_width_min (optional)
+     * @param  int $asset_width_max asset_width_max (optional)
+     * @param  int $copyright_handler_id copyright_handler_id (optional)
+     * @param  int $copyright_holder_id copyright_holder_id (optional)
+     * @param  int $creator_id creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bridgeman\Client\Model\InlineResponse2001
      */
-    public function getAssetsProfile($offset = null)
+    public function getAssetsProfile($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        list($response) = $this->getAssetsProfileWithHttpInfo($offset);
+        list($response) = $this->getAssetsProfileWithHttpInfo($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
         return $response;
     }
 
@@ -609,15 +1274,50 @@ class AssetsApi
      * Operation getAssetsProfileWithHttpInfo
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bridgeman\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAssetsProfileWithHttpInfo($offset = null)
+    public function getAssetsProfileWithHttpInfo($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
-        $request = $this->getAssetsProfileRequest($offset);
+        $request = $this->getAssetsProfileRequest($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -684,13 +1384,48 @@ class AssetsApi
      * 
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsProfileAsync($offset = null)
+    public function getAssetsProfileAsync($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
-        return $this->getAssetsProfileAsyncWithHttpInfo($offset)
+        return $this->getAssetsProfileAsyncWithHttpInfo($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -704,14 +1439,49 @@ class AssetsApi
      * 
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsProfileAsyncWithHttpInfo($offset = null)
+    public function getAssetsProfileAsyncWithHttpInfo($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
-        $request = $this->getAssetsProfileRequest($offset);
+        $request = $this->getAssetsProfileRequest($offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -754,11 +1524,46 @@ class AssetsApi
      * Create request for operation 'getAssetsProfile'
      *
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
+     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
+     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
+     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
+     * @param  int $asset_category_id (optional)
+     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
+     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
+     * @param  int $asset_created_century_from (optional)
+     * @param  int $asset_created_century_until (optional)
+     * @param  int $asset_created_year_from (optional)
+     * @param  int $asset_created_year_until (optional)
+     * @param  string $asset_description (optional)
+     * @param  int $asset_height_min (optional)
+     * @param  int $asset_height_max (optional)
+     * @param  int $asset_id (optional)
+     * @param  int $asset_id_from starting asset id (inclusive) (optional)
+     * @param  int $asset_id_to ending asset id (inclusive) (optional)
+     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
+     * @param  string $asset_keywords (optional)
+     * @param  string $asset_location (optional)
+     * @param  string $asset_medium (optional)
+     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
+     * @param  int $asset_rgb_red_value (optional)
+     * @param  int $asset_rgb_green_value (optional)
+     * @param  int $asset_rgb_blue_value (optional)
+     * @param  string $asset_rgb_profile (optional)
+     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
+     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
+     * @param  int $asset_width_min (optional)
+     * @param  int $asset_width_max (optional)
+     * @param  int $copyright_handler_id (optional)
+     * @param  int $copyright_holder_id (optional)
+     * @param  int $creator_id (optional)
+     * @param  string $region 3 letters country code (optional)
+     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAssetsProfileRequest($offset = null)
+    protected function getAssetsProfileRequest($offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
     {
 
         $resourcePath = '/assets/profile';
@@ -771,6 +1576,146 @@ class AssetsApi
         // query params
         if ($offset !== null) {
             $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
+        }
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
+        }
+        // query params
+        if ($sort !== null) {
+            $queryParams['sort'] = ObjectSerializer::toQueryValue($sort);
+        }
+        // query params
+        if ($sort_order !== null) {
+            $queryParams['sort_order'] = ObjectSerializer::toQueryValue($sort_order);
+        }
+        // query params
+        if ($query !== null) {
+            $queryParams['query'] = ObjectSerializer::toQueryValue($query);
+        }
+        // query params
+        if ($asset_category_id !== null) {
+            $queryParams['asset_category_id'] = ObjectSerializer::toQueryValue($asset_category_id);
+        }
+        // query params
+        if ($asset_colour_type !== null) {
+            $queryParams['asset_colour_type'] = ObjectSerializer::toQueryValue($asset_colour_type);
+        }
+        // query params
+        if ($asset_copyright_status !== null) {
+            $queryParams['asset_copyright_status'] = ObjectSerializer::toQueryValue($asset_copyright_status);
+        }
+        // query params
+        if ($asset_created_century_from !== null) {
+            $queryParams['asset_created_century_from'] = ObjectSerializer::toQueryValue($asset_created_century_from);
+        }
+        // query params
+        if ($asset_created_century_until !== null) {
+            $queryParams['asset_created_century_until'] = ObjectSerializer::toQueryValue($asset_created_century_until);
+        }
+        // query params
+        if ($asset_created_year_from !== null) {
+            $queryParams['asset_created_year_from'] = ObjectSerializer::toQueryValue($asset_created_year_from);
+        }
+        // query params
+        if ($asset_created_year_until !== null) {
+            $queryParams['asset_created_year_until'] = ObjectSerializer::toQueryValue($asset_created_year_until);
+        }
+        // query params
+        if ($asset_description !== null) {
+            $queryParams['asset_description'] = ObjectSerializer::toQueryValue($asset_description);
+        }
+        // query params
+        if ($asset_height_min !== null) {
+            $queryParams['asset_height_min'] = ObjectSerializer::toQueryValue($asset_height_min);
+        }
+        // query params
+        if ($asset_height_max !== null) {
+            $queryParams['asset_height_max'] = ObjectSerializer::toQueryValue($asset_height_max);
+        }
+        // query params
+        if ($asset_id !== null) {
+            $queryParams['asset_id'] = ObjectSerializer::toQueryValue($asset_id);
+        }
+        // query params
+        if ($asset_id_from !== null) {
+            $queryParams['asset_id_from'] = ObjectSerializer::toQueryValue($asset_id_from);
+        }
+        // query params
+        if ($asset_id_to !== null) {
+            $queryParams['asset_id_to'] = ObjectSerializer::toQueryValue($asset_id_to);
+        }
+        // query params
+        if ($asset_image_of !== null) {
+            $queryParams['asset_image_of'] = ObjectSerializer::toQueryValue($asset_image_of);
+        }
+        // query params
+        if ($asset_keywords !== null) {
+            $queryParams['asset_keywords'] = ObjectSerializer::toQueryValue($asset_keywords);
+        }
+        // query params
+        if ($asset_location !== null) {
+            $queryParams['asset_location'] = ObjectSerializer::toQueryValue($asset_location);
+        }
+        // query params
+        if ($asset_medium !== null) {
+            $queryParams['asset_medium'] = ObjectSerializer::toQueryValue($asset_medium);
+        }
+        // query params
+        if ($asset_orientation !== null) {
+            $queryParams['asset_orientation'] = ObjectSerializer::toQueryValue($asset_orientation);
+        }
+        // query params
+        if ($asset_rgb_red_value !== null) {
+            $queryParams['asset_rgb_red_value'] = ObjectSerializer::toQueryValue($asset_rgb_red_value);
+        }
+        // query params
+        if ($asset_rgb_green_value !== null) {
+            $queryParams['asset_rgb_green_value'] = ObjectSerializer::toQueryValue($asset_rgb_green_value);
+        }
+        // query params
+        if ($asset_rgb_blue_value !== null) {
+            $queryParams['asset_rgb_blue_value'] = ObjectSerializer::toQueryValue($asset_rgb_blue_value);
+        }
+        // query params
+        if ($asset_rgb_profile !== null) {
+            $queryParams['asset_rgb_profile'] = ObjectSerializer::toQueryValue($asset_rgb_profile);
+        }
+        // query params
+        if ($asset_title !== null) {
+            $queryParams['asset_title'] = ObjectSerializer::toQueryValue($asset_title);
+        }
+        // query params
+        if ($asset_type !== null) {
+            $queryParams['asset_type'] = ObjectSerializer::toQueryValue($asset_type);
+        }
+        // query params
+        if ($asset_width_min !== null) {
+            $queryParams['asset_width_min'] = ObjectSerializer::toQueryValue($asset_width_min);
+        }
+        // query params
+        if ($asset_width_max !== null) {
+            $queryParams['asset_width_max'] = ObjectSerializer::toQueryValue($asset_width_max);
+        }
+        // query params
+        if ($copyright_handler_id !== null) {
+            $queryParams['copyright_handler_id'] = ObjectSerializer::toQueryValue($copyright_handler_id);
+        }
+        // query params
+        if ($copyright_holder_id !== null) {
+            $queryParams['copyright_holder_id'] = ObjectSerializer::toQueryValue($copyright_holder_id);
+        }
+        // query params
+        if ($creator_id !== null) {
+            $queryParams['creator_id'] = ObjectSerializer::toQueryValue($creator_id);
+        }
+        // query params
+        if ($region !== null) {
+            $queryParams['region'] = ObjectSerializer::toQueryValue($region);
+        }
+        // query params
+        if ($supplier_id !== null) {
+            $queryParams['supplier_id'] = ObjectSerializer::toQueryValue($supplier_id);
         }
 
 
