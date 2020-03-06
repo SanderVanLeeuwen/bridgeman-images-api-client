@@ -73,7 +73,7 @@ class AssetBasic implements ModelInterface, ArrayAccess
 'special_instruction' => 'string',
 'dimensions' => '\Bridgeman\Client\Model\AssetBasicDimensions',
 'rgb_profile' => '\Bridgeman\Client\Model\AssetBasicRgbProfile',
-'credits' => 'string[]',
+'credits' => '\Bridgeman\Client\Model\AssetBasicType[]',
 'permissions' => 'string[]',
 'restrictions' => 'string[]',
 'thumbnail' => '\Bridgeman\Client\Model\AssetBasicThumbnail',
@@ -733,7 +733,7 @@ class AssetBasic implements ModelInterface, ArrayAccess
     /**
      * Gets credits
      *
-     * @return string[]
+     * @return \Bridgeman\Client\Model\AssetBasicType[]
      */
     public function getCredits()
     {
@@ -743,7 +743,7 @@ class AssetBasic implements ModelInterface, ArrayAccess
     /**
      * Sets credits
      *
-     * @param string[] $credits credits
+     * @param \Bridgeman\Client\Model\AssetBasicType[] $credits credits
      *
      * @return $this
      */

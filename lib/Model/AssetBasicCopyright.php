@@ -56,7 +56,9 @@ class AssetBasicCopyright implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status' => 'string'    ];
+        'status' => 'string',
+'holder' => 'object',
+'handler' => 'object'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +66,9 @@ class AssetBasicCopyright implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'status' => null    ];
+        'status' => null,
+'holder' => null,
+'handler' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +97,9 @@ class AssetBasicCopyright implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'status'    ];
+        'status' => 'status',
+'holder' => 'holder',
+'handler' => 'handler'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +107,9 @@ class AssetBasicCopyright implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus'    ];
+        'status' => 'setStatus',
+'holder' => 'setHolder',
+'handler' => 'setHandler'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +117,9 @@ class AssetBasicCopyright implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus'    ];
+        'status' => 'getStatus',
+'holder' => 'getHolder',
+'handler' => 'getHandler'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -170,6 +180,8 @@ class AssetBasicCopyright implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['holder'] = isset($data['holder']) ? $data['holder'] : null;
+        $this->container['handler'] = isset($data['handler']) ? $data['handler'] : null;
     }
 
     /**
@@ -216,6 +228,54 @@ class AssetBasicCopyright implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets holder
+     *
+     * @return object
+     */
+    public function getHolder()
+    {
+        return $this->container['holder'];
+    }
+
+    /**
+     * Sets holder
+     *
+     * @param object $holder holder
+     *
+     * @return $this
+     */
+    public function setHolder($holder)
+    {
+        $this->container['holder'] = $holder;
+
+        return $this;
+    }
+
+    /**
+     * Gets handler
+     *
+     * @return object
+     */
+    public function getHandler()
+    {
+        return $this->container['handler'];
+    }
+
+    /**
+     * Sets handler
+     *
+     * @param object $handler handler
+     *
+     * @return $this
+     */
+    public function setHandler($handler)
+    {
+        $this->container['handler'] = $handler;
 
         return $this;
     }

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **special_instruction** | **string** |  | [optional] 
 **dimensions** | [**\Bridgeman\Client\Model\AssetBasicDimensions**](AssetBasicDimensions.md) |  | [optional] 
 **rgb_profile** | [**\Bridgeman\Client\Model\AssetBasicRgbProfile**](AssetBasicRgbProfile.md) |  | [optional] 
-**credits** | **string[]** |  | [optional] 
+**credits** | [**\Bridgeman\Client\Model\AssetBasicType[]**](AssetBasicType.md) |  | [optional] 
 **permissions** | **string[]** |  | [optional] 
 **restrictions** | **string[]** |  | [optional] 
 **thumbnail** | [**\Bridgeman\Client\Model\AssetBasicThumbnail**](AssetBasicThumbnail.md) |  | [optional] 
