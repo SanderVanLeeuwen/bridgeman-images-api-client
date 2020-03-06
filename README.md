@@ -84,7 +84,9 @@ All URIs are relative to *https://public-api.bridgemanimages.com/1.0*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AssetApi* | [**getImage**](docs/Api/AssetApi.md#getimage) | **GET** /asset/{id}/image/{size} | 
-*AssetsApi* | [**getAssets**](docs/Api/AssetsApi.md#getassets) | **GET** /assets/{scope} | 
+*AssetsApi* | [**getAssetsBasic**](docs/Api/AssetsApi.md#getassetsbasic) | **GET** /assets/basic | 
+*AssetsApi* | [**getAssetsLimitedProfile**](docs/Api/AssetsApi.md#getassetslimitedprofile) | **GET** /assets/limited_profile | 
+*AssetsApi* | [**getAssetsProfile**](docs/Api/AssetsApi.md#getassetsprofile) | **GET** /assets/profile | 
 *AssetsApi* | [**getAssetsRemoved**](docs/Api/AssetsApi.md#getassetsremoved) | **GET** /assets-removed | 
 *AuthenticationApi* | [**getToken**](docs/Api/AuthenticationApi.md#gettoken) | **GET** /token | 
 
@@ -92,11 +94,14 @@ Class | Method | HTTP request | Description
 
  - [AssetBasic](docs/Model/AssetBasic.md)
  - [AssetBasicType](docs/Model/AssetBasicType.md)
+ - [AssetLimitedProfile](docs/Model/AssetLimitedProfile.md)
  - [AssetProfile](docs/Model/AssetProfile.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
- - [InlineResponse2001Data](docs/Model/InlineResponse2001Data.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
+ - [InlineResponse2003](docs/Model/InlineResponse2003.md)
+ - [InlineResponse2003Data](docs/Model/InlineResponse2003Data.md)
+ - [InlineResponse2004](docs/Model/InlineResponse2004.md)
  - [MetaData](docs/Model/MetaData.md)
 
 ## Documentation For Authorization

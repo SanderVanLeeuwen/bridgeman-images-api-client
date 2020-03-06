@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2002
+ * InlineResponse2003
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Bridgeman\Client\ObjectSerializer;
 
 /**
- * InlineResponse2002 Class Doc Comment
+ * InlineResponse2003 Class Doc Comment
  *
  * @category Class
  * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2002 implements ModelInterface, ArrayAccess
+class InlineResponse2003 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_2';
+    protected static $swaggerModelName = 'inline_response_200_3';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'metadata' => '\Bridgeman\Client\Model\MetaData',
-'data' => 'null[]'    ];
+'data' => '\Bridgeman\Client\Model\InlineResponse2003Data[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -229,7 +229,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return null[]
+     * @return \Bridgeman\Client\Model\InlineResponse2003Data[]
      */
     public function getData()
     {
@@ -239,7 +239,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param null[] $data data
+     * @param \Bridgeman\Client\Model\InlineResponse2003Data[] $data data
      *
      * @return $this
      */

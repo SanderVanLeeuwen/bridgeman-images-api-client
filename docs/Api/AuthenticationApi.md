@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getToken**](AuthenticationApi.md#gettoken) | **GET** /token | 
 
 # **getToken**
-> \Bridgeman\Client\Model\InlineResponse2002 getToken($client_id, $client_secret, $grant_type)
+> \Bridgeman\Client\Model\InlineResponse2004 getToken($client_id, $client_secret, $grant_type)
 
 
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bridgeman\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Bridgeman\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 

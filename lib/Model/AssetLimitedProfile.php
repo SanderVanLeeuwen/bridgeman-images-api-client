@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2001Data
+ * AssetLimitedProfile
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Bridgeman\Client\ObjectSerializer;
 
 /**
- * InlineResponse2001Data Class Doc Comment
+ * AssetLimitedProfile Class Doc Comment
  *
  * @category Class
  * @package  Bridgeman\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2001Data implements ModelInterface, ArrayAccess
+class AssetLimitedProfile implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_1_data';
+    protected static $swaggerModelName = 'AssetLimitedProfile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,8 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int'    ];
+        'id' => 'int',
+'last_modified' => '\DateTime'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null    ];
+        'id' => null,
+'last_modified' => 'date-time'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'    ];
+        'id' => 'id',
+'last_modified' => 'last_modified'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'    ];
+        'id' => 'setId',
+'last_modified' => 'setLastModified'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'    ];
+        'id' => 'getId',
+'last_modified' => 'getLastModified'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -170,6 +175,7 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['last_modified'] = isset($data['last_modified']) ? $data['last_modified'] : null;
     }
 
     /**
@@ -216,6 +222,30 @@ class InlineResponse2001Data implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_modified
+     *
+     * @return \DateTime
+     */
+    public function getLastModified()
+    {
+        return $this->container['last_modified'];
+    }
+
+    /**
+     * Sets last_modified
+     *
+     * @param \DateTime $last_modified last_modified
+     *
+     * @return $this
+     */
+    public function setLastModified($last_modified)
+    {
+        $this->container['last_modified'] = $last_modified;
 
         return $this;
     }

@@ -1,10 +1,10 @@
-# InlineResponse2002
+# AssetLimitedProfile
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**\Bridgeman\Client\Model\MetaData**](MetaData.md) |  | [optional] 
-**data** | [**null[]**](.md) |  | [optional] 
+**id** | **int** |  | [optional] 
+**last_modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -76,30 +76,16 @@ class InlineResponse2002Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "access_token"
+     * Test attribute "metadata"
      */
-    public function testPropertyAccessToken()
+    public function testPropertyMetadata()
     {
     }
 
     /**
-     * Test attribute "expires_in"
+     * Test attribute "data"
      */
-    public function testPropertyExpiresIn()
-    {
-    }
-
-    /**
-     * Test attribute "token_type"
-     */
-    public function testPropertyTokenType()
-    {
-    }
-
-    /**
-     * Test attribute "scope"
-     */
-    public function testPropertyScope()
+    public function testPropertyData()
     {
     }
 }

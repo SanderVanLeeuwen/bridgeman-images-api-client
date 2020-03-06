@@ -95,7 +95,7 @@ class AuthenticationApi
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Bridgeman\Client\Model\InlineResponse2002
+     * @return \Bridgeman\Client\Model\InlineResponse2004
      */
     public function getToken($client_id, $client_secret, $grant_type)
     {
@@ -112,11 +112,11 @@ class AuthenticationApi
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Bridgeman\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bridgeman\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenWithHttpInfo($client_id, $client_secret, $grant_type)
     {
-        $returnType = '\Bridgeman\Client\Model\InlineResponse2002';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2004';
         $request = $this->getTokenRequest($client_id, $client_secret, $grant_type);
 
         try {
@@ -168,7 +168,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bridgeman\Client\Model\InlineResponse2002',
+                        '\Bridgeman\Client\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class AuthenticationApi
      */
     public function getTokenAsyncWithHttpInfo($client_id, $client_secret, $grant_type)
     {
-        $returnType = '\Bridgeman\Client\Model\InlineResponse2002';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2004';
         $request = $this->getTokenRequest($client_id, $client_secret, $grant_type);
 
         return $this->client

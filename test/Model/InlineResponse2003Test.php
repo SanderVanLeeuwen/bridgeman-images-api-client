@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2001DataTest
+ * InlineResponse2003Test
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Bridgeman\Client;
 
 /**
- * InlineResponse2001DataTest Class Doc Comment
+ * InlineResponse2003Test Class Doc Comment
  *
  * @category    Class
- * @description InlineResponse2001Data
+ * @description InlineResponse2003
  * @package     Bridgeman\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2001DataTest extends \PHPUnit_Framework_TestCase
+class InlineResponse2003Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,16 +69,23 @@ class InlineResponse2001DataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "InlineResponse2001Data"
+     * Test "InlineResponse2003"
      */
-    public function testInlineResponse2001Data()
+    public function testInlineResponse2003()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "metadata"
      */
-    public function testPropertyId()
+    public function testPropertyMetadata()
+    {
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
     }
 }

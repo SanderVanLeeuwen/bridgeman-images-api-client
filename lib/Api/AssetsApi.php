@@ -87,105 +87,33 @@ class AssetsApi
     }
 
     /**
-     * Operation getAssets
+     * Operation getAssetsBasic
      *
-     * @param  string $scope Scope of data to be returned: * basic * profile * limited_profile (required)
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
-     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
-     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
-     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
-     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
-     * @param  int $asset_category_id asset_category_id (optional)
-     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
-     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
-     * @param  int $asset_created_century_from asset_created_century_from (optional)
-     * @param  int $asset_created_century_until asset_created_century_until (optional)
-     * @param  int $asset_created_year_from asset_created_year_from (optional)
-     * @param  int $asset_created_year_until asset_created_year_until (optional)
-     * @param  string $asset_description asset_description (optional)
-     * @param  int $asset_height_min asset_height_min (optional)
-     * @param  int $asset_height_max asset_height_max (optional)
-     * @param  int $asset_id asset_id (optional)
-     * @param  int $asset_id_from starting asset id (inclusive) (optional)
-     * @param  int $asset_id_to ending asset id (inclusive) (optional)
-     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
-     * @param  string $asset_keywords asset_keywords (optional)
-     * @param  string $asset_location asset_location (optional)
-     * @param  string $asset_medium asset_medium (optional)
-     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
-     * @param  int $asset_rgb_red_value asset_rgb_red_value (optional)
-     * @param  int $asset_rgb_green_value asset_rgb_green_value (optional)
-     * @param  int $asset_rgb_blue_value asset_rgb_blue_value (optional)
-     * @param  string $asset_rgb_profile asset_rgb_profile (optional)
-     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
-     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
-     * @param  int $asset_width_min asset_width_min (optional)
-     * @param  int $asset_width_max asset_width_max (optional)
-     * @param  int $copyright_handler_id copyright_handler_id (optional)
-     * @param  int $copyright_holder_id copyright_holder_id (optional)
-     * @param  int $creator_id creator_id (optional)
-     * @param  string $region 3 letters country code (optional)
-     * @param  int $supplier_id supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bridgeman\Client\Model\InlineResponse200
      */
-    public function getAssets($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
+    public function getAssetsBasic($offset = null)
     {
-        list($response) = $this->getAssetsWithHttpInfo($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
+        list($response) = $this->getAssetsBasicWithHttpInfo($offset);
         return $response;
     }
 
     /**
-     * Operation getAssetsWithHttpInfo
+     * Operation getAssetsBasicWithHttpInfo
      *
-     * @param  string $scope Scope of data to be returned: * basic * profile * limited_profile (required)
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
-     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
-     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
-     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
-     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
-     * @param  int $asset_category_id (optional)
-     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
-     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
-     * @param  int $asset_created_century_from (optional)
-     * @param  int $asset_created_century_until (optional)
-     * @param  int $asset_created_year_from (optional)
-     * @param  int $asset_created_year_until (optional)
-     * @param  string $asset_description (optional)
-     * @param  int $asset_height_min (optional)
-     * @param  int $asset_height_max (optional)
-     * @param  int $asset_id (optional)
-     * @param  int $asset_id_from starting asset id (inclusive) (optional)
-     * @param  int $asset_id_to ending asset id (inclusive) (optional)
-     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
-     * @param  string $asset_keywords (optional)
-     * @param  string $asset_location (optional)
-     * @param  string $asset_medium (optional)
-     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
-     * @param  int $asset_rgb_red_value (optional)
-     * @param  int $asset_rgb_green_value (optional)
-     * @param  int $asset_rgb_blue_value (optional)
-     * @param  string $asset_rgb_profile (optional)
-     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
-     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
-     * @param  int $asset_width_min (optional)
-     * @param  int $asset_width_max (optional)
-     * @param  int $copyright_handler_id (optional)
-     * @param  int $copyright_holder_id (optional)
-     * @param  int $creator_id (optional)
-     * @param  string $region 3 letters country code (optional)
-     * @param  int $supplier_id (optional)
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bridgeman\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAssetsWithHttpInfo($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
+    public function getAssetsBasicWithHttpInfo($offset = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse200';
-        $request = $this->getAssetsRequest($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
+        $request = $this->getAssetsBasicRequest($offset);
 
         try {
             $options = $this->createHttpClientOption();
@@ -247,54 +175,18 @@ class AssetsApi
     }
 
     /**
-     * Operation getAssetsAsync
+     * Operation getAssetsBasicAsync
      *
      * 
      *
-     * @param  string $scope Scope of data to be returned: * basic * profile * limited_profile (required)
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
-     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
-     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
-     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
-     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
-     * @param  int $asset_category_id (optional)
-     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
-     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
-     * @param  int $asset_created_century_from (optional)
-     * @param  int $asset_created_century_until (optional)
-     * @param  int $asset_created_year_from (optional)
-     * @param  int $asset_created_year_until (optional)
-     * @param  string $asset_description (optional)
-     * @param  int $asset_height_min (optional)
-     * @param  int $asset_height_max (optional)
-     * @param  int $asset_id (optional)
-     * @param  int $asset_id_from starting asset id (inclusive) (optional)
-     * @param  int $asset_id_to ending asset id (inclusive) (optional)
-     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
-     * @param  string $asset_keywords (optional)
-     * @param  string $asset_location (optional)
-     * @param  string $asset_medium (optional)
-     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
-     * @param  int $asset_rgb_red_value (optional)
-     * @param  int $asset_rgb_green_value (optional)
-     * @param  int $asset_rgb_blue_value (optional)
-     * @param  string $asset_rgb_profile (optional)
-     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
-     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
-     * @param  int $asset_width_min (optional)
-     * @param  int $asset_width_max (optional)
-     * @param  int $copyright_handler_id (optional)
-     * @param  int $copyright_holder_id (optional)
-     * @param  int $creator_id (optional)
-     * @param  string $region 3 letters country code (optional)
-     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsAsync($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
+    public function getAssetsBasicAsync($offset = null)
     {
-        return $this->getAssetsAsyncWithHttpInfo($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id)
+        return $this->getAssetsBasicAsyncWithHttpInfo($offset)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -303,55 +195,19 @@ class AssetsApi
     }
 
     /**
-     * Operation getAssetsAsyncWithHttpInfo
+     * Operation getAssetsBasicAsyncWithHttpInfo
      *
      * 
      *
-     * @param  string $scope Scope of data to be returned: * basic * profile * limited_profile (required)
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
-     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
-     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
-     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
-     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
-     * @param  int $asset_category_id (optional)
-     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
-     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
-     * @param  int $asset_created_century_from (optional)
-     * @param  int $asset_created_century_until (optional)
-     * @param  int $asset_created_year_from (optional)
-     * @param  int $asset_created_year_until (optional)
-     * @param  string $asset_description (optional)
-     * @param  int $asset_height_min (optional)
-     * @param  int $asset_height_max (optional)
-     * @param  int $asset_id (optional)
-     * @param  int $asset_id_from starting asset id (inclusive) (optional)
-     * @param  int $asset_id_to ending asset id (inclusive) (optional)
-     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
-     * @param  string $asset_keywords (optional)
-     * @param  string $asset_location (optional)
-     * @param  string $asset_medium (optional)
-     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
-     * @param  int $asset_rgb_red_value (optional)
-     * @param  int $asset_rgb_green_value (optional)
-     * @param  int $asset_rgb_blue_value (optional)
-     * @param  string $asset_rgb_profile (optional)
-     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
-     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
-     * @param  int $asset_width_min (optional)
-     * @param  int $asset_width_max (optional)
-     * @param  int $copyright_handler_id (optional)
-     * @param  int $copyright_holder_id (optional)
-     * @param  int $creator_id (optional)
-     * @param  string $region 3 letters country code (optional)
-     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAssetsAsyncWithHttpInfo($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
+    public function getAssetsBasicAsyncWithHttpInfo($offset = null)
     {
         $returnType = '\Bridgeman\Client\Model\InlineResponse200';
-        $request = $this->getAssetsRequest($scope, $offset, $limit, $sort, $sort_order, $query, $asset_category_id, $asset_colour_type, $asset_copyright_status, $asset_created_century_from, $asset_created_century_until, $asset_created_year_from, $asset_created_year_until, $asset_description, $asset_height_min, $asset_height_max, $asset_id, $asset_id_from, $asset_id_to, $asset_image_of, $asset_keywords, $asset_location, $asset_medium, $asset_orientation, $asset_rgb_red_value, $asset_rgb_green_value, $asset_rgb_blue_value, $asset_rgb_profile, $asset_title, $asset_type, $asset_width_min, $asset_width_max, $copyright_handler_id, $copyright_holder_id, $creator_id, $region, $supplier_id);
+        $request = $this->getAssetsBasicRequest($offset);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -391,59 +247,17 @@ class AssetsApi
     }
 
     /**
-     * Create request for operation 'getAssets'
+     * Create request for operation 'getAssetsBasic'
      *
-     * @param  string $scope Scope of data to be returned: * basic * profile * limited_profile (required)
      * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
-     * @param  int $limit Limits the list returned to this amount. Default 10. (optional)
-     * @param  string $sort Order the results using following options: * default * asset_hr_size * asset_id * asset_in_copyright * asset_medium * creator_name * latest * location_name * most_popular * most_relevant * photographer_name * supplier_prefix (optional)
-     * @param  string $sort_order Defines an order for sorting: ASC or DESC. (optional)
-     * @param  string $query Filter the list by given query, e.g.: &#x27;cats dogs&#x27; (optional)
-     * @param  int $asset_category_id (optional)
-     * @param  string $asset_colour_type * bw &#x3D; Black and White * col &#x3D; Coloured (optional)
-     * @param  int $asset_copyright_status * 0 &#x3D; OUT of Copyright * 1 &#x3D; IN Copyright * 2 &#x3D; Unknown Copyright Status (optional)
-     * @param  int $asset_created_century_from (optional)
-     * @param  int $asset_created_century_until (optional)
-     * @param  int $asset_created_year_from (optional)
-     * @param  int $asset_created_year_until (optional)
-     * @param  string $asset_description (optional)
-     * @param  int $asset_height_min (optional)
-     * @param  int $asset_height_max (optional)
-     * @param  int $asset_id (optional)
-     * @param  int $asset_id_from starting asset id (inclusive) (optional)
-     * @param  int $asset_id_to ending asset id (inclusive) (optional)
-     * @param  string $asset_image_of * ill &#x3D; Illustration * obj &#x3D; Object * pho &#x3D; Photo (optional)
-     * @param  string $asset_keywords (optional)
-     * @param  string $asset_location (optional)
-     * @param  string $asset_medium (optional)
-     * @param  string $asset_orientation * h &#x3D; Horizontal * v &#x3D; Vertical * s &#x3D; Square (optional)
-     * @param  int $asset_rgb_red_value (optional)
-     * @param  int $asset_rgb_green_value (optional)
-     * @param  int $asset_rgb_blue_value (optional)
-     * @param  string $asset_rgb_profile (optional)
-     * @param  string $asset_title Example: &#x27;rainy%20day&#x27; (optional)
-     * @param  int $asset_type * 1 &#x3D; Image * 2 &#x3D; Footage (optional)
-     * @param  int $asset_width_min (optional)
-     * @param  int $asset_width_max (optional)
-     * @param  int $copyright_handler_id (optional)
-     * @param  int $copyright_holder_id (optional)
-     * @param  int $creator_id (optional)
-     * @param  string $region 3 letters country code (optional)
-     * @param  int $supplier_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAssetsRequest($scope, $offset = null, $limit = null, $sort = null, $sort_order = null, $query = null, $asset_category_id = null, $asset_colour_type = null, $asset_copyright_status = null, $asset_created_century_from = null, $asset_created_century_until = null, $asset_created_year_from = null, $asset_created_year_until = null, $asset_description = null, $asset_height_min = null, $asset_height_max = null, $asset_id = null, $asset_id_from = null, $asset_id_to = null, $asset_image_of = null, $asset_keywords = null, $asset_location = null, $asset_medium = null, $asset_orientation = null, $asset_rgb_red_value = null, $asset_rgb_green_value = null, $asset_rgb_blue_value = null, $asset_rgb_profile = null, $asset_title = null, $asset_type = null, $asset_width_min = null, $asset_width_max = null, $copyright_handler_id = null, $copyright_holder_id = null, $creator_id = null, $region = null, $supplier_id = null)
+    protected function getAssetsBasicRequest($offset = null)
     {
-        // verify the required parameter 'scope' is set
-        if ($scope === null || (is_array($scope) && count($scope) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $scope when calling getAssets'
-            );
-        }
 
-        $resourcePath = '/assets/{scope}';
+        $resourcePath = '/assets/basic';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -454,155 +268,511 @@ class AssetsApi
         if ($offset !== null) {
             $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
         }
-        // query params
-        if ($limit !== null) {
-            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
-        }
-        // query params
-        if ($sort !== null) {
-            $queryParams['sort'] = ObjectSerializer::toQueryValue($sort);
-        }
-        // query params
-        if ($sort_order !== null) {
-            $queryParams['sort_order'] = ObjectSerializer::toQueryValue($sort_order);
-        }
-        // query params
-        if ($query !== null) {
-            $queryParams['query'] = ObjectSerializer::toQueryValue($query);
-        }
-        // query params
-        if ($asset_category_id !== null) {
-            $queryParams['asset_category_id'] = ObjectSerializer::toQueryValue($asset_category_id);
-        }
-        // query params
-        if ($asset_colour_type !== null) {
-            $queryParams['asset_colour_type'] = ObjectSerializer::toQueryValue($asset_colour_type);
-        }
-        // query params
-        if ($asset_copyright_status !== null) {
-            $queryParams['asset_copyright_status'] = ObjectSerializer::toQueryValue($asset_copyright_status);
-        }
-        // query params
-        if ($asset_created_century_from !== null) {
-            $queryParams['asset_created_century_from'] = ObjectSerializer::toQueryValue($asset_created_century_from);
-        }
-        // query params
-        if ($asset_created_century_until !== null) {
-            $queryParams['asset_created_century_until'] = ObjectSerializer::toQueryValue($asset_created_century_until);
-        }
-        // query params
-        if ($asset_created_year_from !== null) {
-            $queryParams['asset_created_year_from'] = ObjectSerializer::toQueryValue($asset_created_year_from);
-        }
-        // query params
-        if ($asset_created_year_until !== null) {
-            $queryParams['asset_created_year_until'] = ObjectSerializer::toQueryValue($asset_created_year_until);
-        }
-        // query params
-        if ($asset_description !== null) {
-            $queryParams['asset_description'] = ObjectSerializer::toQueryValue($asset_description);
-        }
-        // query params
-        if ($asset_height_min !== null) {
-            $queryParams['asset_height_min'] = ObjectSerializer::toQueryValue($asset_height_min);
-        }
-        // query params
-        if ($asset_height_max !== null) {
-            $queryParams['asset_height_max'] = ObjectSerializer::toQueryValue($asset_height_max);
-        }
-        // query params
-        if ($asset_id !== null) {
-            $queryParams['asset_id'] = ObjectSerializer::toQueryValue($asset_id);
-        }
-        // query params
-        if ($asset_id_from !== null) {
-            $queryParams['asset_id_from'] = ObjectSerializer::toQueryValue($asset_id_from);
-        }
-        // query params
-        if ($asset_id_to !== null) {
-            $queryParams['asset_id_to'] = ObjectSerializer::toQueryValue($asset_id_to);
-        }
-        // query params
-        if ($asset_image_of !== null) {
-            $queryParams['asset_image_of'] = ObjectSerializer::toQueryValue($asset_image_of);
-        }
-        // query params
-        if ($asset_keywords !== null) {
-            $queryParams['asset_keywords'] = ObjectSerializer::toQueryValue($asset_keywords);
-        }
-        // query params
-        if ($asset_location !== null) {
-            $queryParams['asset_location'] = ObjectSerializer::toQueryValue($asset_location);
-        }
-        // query params
-        if ($asset_medium !== null) {
-            $queryParams['asset_medium'] = ObjectSerializer::toQueryValue($asset_medium);
-        }
-        // query params
-        if ($asset_orientation !== null) {
-            $queryParams['asset_orientation'] = ObjectSerializer::toQueryValue($asset_orientation);
-        }
-        // query params
-        if ($asset_rgb_red_value !== null) {
-            $queryParams['asset_rgb_red_value'] = ObjectSerializer::toQueryValue($asset_rgb_red_value);
-        }
-        // query params
-        if ($asset_rgb_green_value !== null) {
-            $queryParams['asset_rgb_green_value'] = ObjectSerializer::toQueryValue($asset_rgb_green_value);
-        }
-        // query params
-        if ($asset_rgb_blue_value !== null) {
-            $queryParams['asset_rgb_blue_value'] = ObjectSerializer::toQueryValue($asset_rgb_blue_value);
-        }
-        // query params
-        if ($asset_rgb_profile !== null) {
-            $queryParams['asset_rgb_profile'] = ObjectSerializer::toQueryValue($asset_rgb_profile);
-        }
-        // query params
-        if ($asset_title !== null) {
-            $queryParams['asset_title'] = ObjectSerializer::toQueryValue($asset_title);
-        }
-        // query params
-        if ($asset_type !== null) {
-            $queryParams['asset_type'] = ObjectSerializer::toQueryValue($asset_type);
-        }
-        // query params
-        if ($asset_width_min !== null) {
-            $queryParams['asset_width_min'] = ObjectSerializer::toQueryValue($asset_width_min);
-        }
-        // query params
-        if ($asset_width_max !== null) {
-            $queryParams['asset_width_max'] = ObjectSerializer::toQueryValue($asset_width_max);
-        }
-        // query params
-        if ($copyright_handler_id !== null) {
-            $queryParams['copyright_handler_id'] = ObjectSerializer::toQueryValue($copyright_handler_id);
-        }
-        // query params
-        if ($copyright_holder_id !== null) {
-            $queryParams['copyright_holder_id'] = ObjectSerializer::toQueryValue($copyright_holder_id);
-        }
-        // query params
-        if ($creator_id !== null) {
-            $queryParams['creator_id'] = ObjectSerializer::toQueryValue($creator_id);
-        }
-        // query params
-        if ($region !== null) {
-            $queryParams['region'] = ObjectSerializer::toQueryValue($region);
-        }
-        // query params
-        if ($supplier_id !== null) {
-            $queryParams['supplier_id'] = ObjectSerializer::toQueryValue($supplier_id);
-        }
 
-        // path params
-        if ($scope !== null) {
-            $resourcePath = str_replace(
-                '{' . 'scope' . '}',
-                ObjectSerializer::toPathValue($scope),
-                $resourcePath
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
             );
         }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getAssetsLimitedProfile
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Bridgeman\Client\Model\InlineResponse2002
+     */
+    public function getAssetsLimitedProfile($offset = null)
+    {
+        list($response) = $this->getAssetsLimitedProfileWithHttpInfo($offset);
+        return $response;
+    }
+
+    /**
+     * Operation getAssetsLimitedProfileWithHttpInfo
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Bridgeman\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAssetsLimitedProfileWithHttpInfo($offset = null)
+    {
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2002';
+        $request = $this->getAssetsLimitedProfileRequest($offset);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Bridgeman\Client\Model\InlineResponse2002',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAssetsLimitedProfileAsync
+     *
+     * 
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAssetsLimitedProfileAsync($offset = null)
+    {
+        return $this->getAssetsLimitedProfileAsyncWithHttpInfo($offset)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAssetsLimitedProfileAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAssetsLimitedProfileAsyncWithHttpInfo($offset = null)
+    {
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2002';
+        $request = $this->getAssetsLimitedProfileRequest($offset);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getAssetsLimitedProfile'
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getAssetsLimitedProfileRequest($offset = null)
+    {
+
+        $resourcePath = '/assets/limited_profile';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($offset !== null) {
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getAssetsProfile
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Bridgeman\Client\Model\InlineResponse2001
+     */
+    public function getAssetsProfile($offset = null)
+    {
+        list($response) = $this->getAssetsProfileWithHttpInfo($offset);
+        return $response;
+    }
+
+    /**
+     * Operation getAssetsProfileWithHttpInfo
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \Bridgeman\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Bridgeman\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAssetsProfileWithHttpInfo($offset = null)
+    {
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
+        $request = $this->getAssetsProfileRequest($offset);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Bridgeman\Client\Model\InlineResponse2001',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAssetsProfileAsync
+     *
+     * 
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAssetsProfileAsync($offset = null)
+    {
+        return $this->getAssetsProfileAsyncWithHttpInfo($offset)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAssetsProfileAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAssetsProfileAsyncWithHttpInfo($offset = null)
+    {
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
+        $request = $this->getAssetsProfileRequest($offset);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getAssetsProfile'
+     *
+     * @param  int $offset Offsets the list returned to this amount. Default 0. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getAssetsProfileRequest($offset = null)
+    {
+
+        $resourcePath = '/assets/profile';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($offset !== null) {
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
+        }
+
 
         // body params
         $_tempBody = null;
@@ -680,7 +850,7 @@ class AssetsApi
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Bridgeman\Client\Model\InlineResponse2001
+     * @return \Bridgeman\Client\Model\InlineResponse2003
      */
     public function getAssetsRemoved($date_start, $date_end = null)
     {
@@ -696,11 +866,11 @@ class AssetsApi
      *
      * @throws \Bridgeman\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Bridgeman\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bridgeman\Client\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetsRemovedWithHttpInfo($date_start, $date_end = null)
     {
-        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2003';
         $request = $this->getAssetsRemovedRequest($date_start, $date_end);
 
         try {
@@ -752,7 +922,7 @@ class AssetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bridgeman\Client\Model\InlineResponse2001',
+                        '\Bridgeman\Client\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -796,7 +966,7 @@ class AssetsApi
      */
     public function getAssetsRemovedAsyncWithHttpInfo($date_start, $date_end = null)
     {
-        $returnType = '\Bridgeman\Client\Model\InlineResponse2001';
+        $returnType = '\Bridgeman\Client\Model\InlineResponse2003';
         $request = $this->getAssetsRemovedRequest($date_start, $date_end);
 
         return $this->client
