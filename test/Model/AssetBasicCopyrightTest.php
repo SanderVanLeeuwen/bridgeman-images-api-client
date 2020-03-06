@@ -81,18 +81,4 @@ class AssetBasicCopyrightTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStatus()
     {
     }
-
-    /**
-     * Test attribute "holder"
-     */
-    public function testPropertyHolder()
-    {
-    }
-
-    /**
-     * Test attribute "handler"
-     */
-    public function testPropertyHandler()
-    {
-    }
 }
